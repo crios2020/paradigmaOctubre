@@ -11,6 +11,13 @@ Github:			https://github.com/crios2020/paradigmaOctubre
 
 
 # Ejemplo en Python
+
+nombre='Carlos'
+print(nombre)
+
+nombre=2
+print(nombre)
+
 class Auto():
 
 	#atributos

@@ -3,6 +3,10 @@ public class Paradigma{
 		//Punto de entrada del proyecto
 		System.out.println("Hola Mundo!!");
 		
+		String nombre="Carlos";
+		System.out.println(nombre);
+		//nombre=2; //error
+		
 		System.out.println("-- auto1 --");
 		Auto auto1=new Auto();		//se construye un objeto 
 		auto1.marca="Citroen";
@@ -19,9 +23,14 @@ public class Paradigma{
 		auto2.marca="Fiat";
 		auto2.modelo="Idea";
 		auto2.color="Rojo";
-		auto2.acelerar();
+		auto2.acelerar(36);
+		auto2.acelerar(12);
 		
 		System.out.println(auto2.marca+" "+auto2.modelo+" "+auto2.color+" "+auto2.velocidad);
+		
+		auto2.imprimirVelocidad();
+		System.out.println(auto2.obtenerVelocidad());
+		
 	}
 }
 
@@ -39,8 +48,45 @@ class Auto{
 		velocidad=velocidad+10;
 	}
 	
+	void acelerar(int kilometros){ //ingreso de parametros
+		velocidad=velocidad+kilometros;
+	}
+	
 	void frenar(){
 		velocidad=velocidad-10;
 	}
 	
+	void imprimirVelocidad(){
+		System.out.println(velocidad);
+	}
+	
+	int obtenerVelocidad(){
+		return velocidad;
+	}
+	
 }//end class
+
+class Cuenta{
+	int nro;
+	double saldo;
+}
+
+class Cliente{
+	int nro;
+	String nombre;
+	int edad;
+	Cuenta cuenta;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
