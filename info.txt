@@ -1,0 +1,62 @@
+Curso:	Introducción al Paradigma de Objetos		9 hs.
+Días:	Jueves	10:00 a 13:00 hs
+Profe: 	Carlos Rios			carlos.rios@educacionit.com
+
+Materiales:		alumni.educacionit.com
+				user: email
+				pass: dni
+				alumnos@educacionit.com
+
+Github:			https://github.com/crios2020/paradigmaOctubre
+
+
+# Ejemplo en Python
+class Auto():
+
+	#atributos
+	marca = ''
+	modelo = ''	
+	color = ''
+	velocidad = 0
+	
+	#métodos
+	def acelerar():
+		self.velocidad=self.velocidad+10
+		
+	def frenar():
+		self.velocidad=self.velocidad-10
+
+print('Hola Mundo!')
+auto1 = Auto()
+auto1.marca='Fiat'
+
+
+//Ejemplo javaScript
+class Auto{
+	var marca=''
+	var modelo=''
+	var color=''
+	var velocidad=0
+	
+	//métodos
+	function Auto(marca,modelo, color default 'verde'){
+		this.marca=marca;
+		this.modelo=modelo;
+		this.color=color;
+	}
+	
+	function acelerar(){
+		velocidad=velocidad+10
+	}
+	
+	function frenar(){
+		velocidad=velocidad-=
+	}
+}//end class
+
+Document.write('Hola mundo!')
+auto1= new Auto()
+auto1.marca='Fiat'	
+
+				
+				
