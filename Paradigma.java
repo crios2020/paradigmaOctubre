@@ -23,9 +23,11 @@ public class Paradigma{
 		auto2.marca="Fiat";
 		auto2.modelo="Idea";
 		auto2.color="Rojo";
-		auto2.acelerar(36);
-		auto2.acelerar(12);
-		
+		//auto2.acelerar(36);
+		//auto2.acelerar(12);
+		auto2.acelerar();
+		auto2.acelerar(20,true);
+
 		System.out.println(auto2.marca+" "+auto2.modelo+" "+auto2.color+" "+auto2.velocidad);
 		
 		auto2.imprimirVelocidad();
@@ -44,13 +46,34 @@ class Auto{
 	int velocidad;
 	
 	//métodos
-	void acelerar(){
-		velocidad=velocidad+10;
+	void acelerar(){												//acelerar
+		//velocidad=velocidad+10;
+		acelerar(10);
 	}
 	
-	void acelerar(int kilometros){ //ingreso de parametros
+	//método sobrecargado
+	private void acelerar(int kilometros){ //ingreso de parametros			//acelerarInt
 		velocidad=velocidad+kilometros;
+		if(velocidad>=100) {
+			velocidad=100;
+		}
 	}
+
+	void acelerar(int km, boolean tieneNitro){						//acelerarIntBoolean
+		if(tieneNitro == false){
+			acelerar(km);							//llamado de método de la misma clase
+		} else {
+			acelerar(km*2);
+		}
+	}
+
+
+	//void acelerar(int x){}			//error						//acelerarInt
+
+	void acelerar(String x){}										//acelerarString
+	void acelerar(String x,int y){}									//acelerarStringInt
+	void acelerar(int x,int y){}									//acelerarIntInt
+
 	
 	void frenar(){
 		velocidad=velocidad-10;
@@ -75,7 +98,30 @@ class Cliente{
 	int nro;
 	String nombre;
 	int edad;
-	Cuenta cuenta;
+	//String direccion;
+	Direccion direccion;
+
+	void metodo(){
+		nombre="Juan";
+		//direccion="Lavalle 648 piso 8 departamento 1 CABA cp1068 Argentina";
+		direccion=new Direccion();
+		direccion.calle="Lavalle";
+		direccion.numero=648;
+		direccion.piso=8;
+		direccion.depto=1;
+		direccion.ciudad="CABA";
+
+	}
+}
+
+class Direccion{
+	String calle;
+	int numero;
+	String piso;
+	String depto;
+	String ciudad;
+	String cp;
+	String pais;
 }
 
 
