@@ -18,7 +18,7 @@ print(nombre)
 nombre=2
 print(nombre)
 
-class Auto():
+class Auto(Vehiculo):
 
 	#atributos
 	marca = ''

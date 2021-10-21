@@ -1,3 +1,10 @@
+/*
+
+    Queda pendiente la ultima diapositiva
+
+*/
+
+
 public class Paradigma2{
     public static void main(String[] args){
         System.out.println("-- Clase 2 --");
@@ -65,6 +72,10 @@ class Cuenta{
         }else{
             System.out.println("Saldo Insuficiente!!!");
         }
+    }
+
+    public double getSaldo(){
+        return saldo;
     }
 
     public String getEstado(){

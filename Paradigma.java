@@ -32,6 +32,9 @@ public class Paradigma{
 		
 		auto2.imprimirVelocidad();
 		System.out.println(auto2.obtenerVelocidad());
+
+		Auto auto3=new Auto();
+		System.out.println(auto3.marca+" "+auto3.modelo+" "+auto3.color+" "+auto3.velocidad);
 		
 	}
 }
@@ -79,6 +82,18 @@ class Auto{
 		velocidad=velocidad-10;
 	}
 	
+	public int getVelocidad(){
+		return velocidad;
+	}
+
+	public void setColor(String color){
+		this.color=color;
+	}
+
+	public String getColor(){
+		return color;
+	}
+
 	void imprimirVelocidad(){
 		System.out.println(velocidad);
 	}
@@ -107,8 +122,8 @@ class Cliente{
 		direccion=new Direccion();
 		direccion.calle="Lavalle";
 		direccion.numero=648;
-		direccion.piso=8;
-		direccion.depto=1;
+		direccion.piso="8";
+		direccion.depto="1";
 		direccion.ciudad="CABA";
 
 	}
